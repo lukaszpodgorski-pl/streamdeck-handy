@@ -1,0 +1,62 @@
+{
+  "Name": "Handy",
+  "Version": "0.1.0.0",
+  "Author": "Łukasz Podgórski",
+  "Description": "Control Handy dictation from your Stream Deck.",
+  "Icon": "imgs/plugin-icon",
+  "UUID": "pl.lukaszpodgorski.handy",
+  "URL": "https://lukaszpodgorski.pl",
+  "Category": "Handy",
+  "CategoryIcon": "imgs/category-icon",
+  "CodePath": "bin/plugin.js",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.4" },
+  "OS": [
+    { "Platform": "mac", "MinimumVersion": "12" },
+    { "Platform": "windows", "MinimumVersion": "10" }
+  ],
+  "Nodejs": { "Version": "20", "Debug": "enabled" },
+  "Actions": [
+    {
+      "Name": "Toggle dictation",
+      "UUID": "pl.lukaszpodgorski.handy.toggle-dictation",
+      "Icon": "imgs/actions/toggle/icon",
+      "States": [
+        {
+          "Image": "imgs/actions/toggle/idle",
+          "TitleAlignment": "bottom",
+          "Title": "Dictate"
+        },
+        {
+          "Image": "imgs/actions/toggle/recording",
+          "Title": "Recording"
+        }
+      ],
+      "PropertyInspectorPath": "ui/toggle-dictation.html",
+      "Tooltip": "Start/stop dictation in Handy",
+      "Controllers": ["Keypad"]
+    },
+    {
+      "Name": "Cancel dictation",
+      "UUID": "pl.lukaszpodgorski.handy.cancel-dictation",
+      "Icon": "imgs/actions/cancel/icon",
+      "States": [
+        { "Image": "imgs/actions/cancel/icon" }
+      ],
+      "PropertyInspectorPath": "ui/toggle-dictation.html",
+      "Tooltip": "Cancel current Handy recording",
+      "Controllers": ["Keypad"]
+    },
+    {
+      "Name": "Toggle with post-processing",
+      "UUID": "pl.lukaszpodgorski.handy.toggle-post-process",
+      "Icon": "imgs/actions/post-process/icon",
+      "States": [
+        { "Image": "imgs/actions/post-process/icon" }
+      ],
+      "PropertyInspectorPath": "ui/toggle-dictation.html",
+      "Tooltip": "Start/stop Handy dictation with post-processing",
+      "Controllers": ["Keypad"]
+    }
+  ]
+}
