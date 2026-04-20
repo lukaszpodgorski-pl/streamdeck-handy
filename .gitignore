@@ -70,3 +70,8 @@ coverage/
 
 # ---- Internal docs (tutorial source used to bootstrap the plugin) ----
 handy-stream-deck-tutorial.md
+
+# ---- Source icon files (pre-resize, not shipped) ----
+temp/
+scripts/slice-mj-icons.ps1
+scripts/icons-from-temp.ps1
